@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class UserRegistrationTest {
     UserRegistration userRegistration = new UserRegistration();
+
     @Test
     public void validateFirstNameTest() {
         boolean actual1 = userRegistration.firstName("Sahil");
@@ -12,6 +13,7 @@ public class UserRegistrationTest {
         Assert.assertTrue(actual1);
         Assert.assertFalse(actual2);
     }
+
     @Test
     public void validateLastNameTest() {
         boolean actual1 = userRegistration.lastName("Sharma");
