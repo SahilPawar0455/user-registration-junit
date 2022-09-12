@@ -28,7 +28,7 @@ public class UserRegistration {
     }
 
     public boolean emailID(String emailID) {
-        boolean result = (Pattern.matches("^[a-zA-Z\\d]{1,1}[a-zA-Z\\d+_.-]+@[a-zA-Z]+.[a-zA-z]{2,}", emailID));
+        boolean result = (Pattern.matches("^[a-zA-Z\\d]{1,1}[a-zA-Z\\d+_.-]+@[a-zA-Z]+.[a-zA-z.]{2,}", emailID));
         if (result) {
             user.setEmail(emailID);
             return true;
