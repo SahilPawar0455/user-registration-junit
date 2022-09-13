@@ -23,8 +23,8 @@ public class UserRegistration {
             return true;
         } else {
             System.out.println("Invalid Name please try again");
+            return false;
         }
-        return false;
     }
 
     public boolean emailID(String emailID) {
@@ -34,8 +34,8 @@ public class UserRegistration {
             return true;
         } else {
             System.out.println("Invalid Last Name Please try Again");
+            return false;
         }
-        return false;
     }
 
     public boolean phoneNumber(String phoneNumber) {
@@ -45,8 +45,8 @@ public class UserRegistration {
             return true;
         } else {
             System.out.println("Invalid Phone Number Please try Again");
+            return false;
         }
-        return false;
     }
 
     public boolean password(String password) {
@@ -56,7 +56,7 @@ public class UserRegistration {
             return true;
         } else {
             System.out.println("Invalid Password Please try again");
+            return false;
         }
-        return false;
     }
 }
