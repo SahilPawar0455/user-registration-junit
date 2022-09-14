@@ -11,8 +11,7 @@ public class UserRegistration {
             user.setFirstName(firstName);
             return true;
         } else {
-            System.out.println("Invalid Name please try again");
-            return false;
+            throw new UserRegistrationException("Invalid first Name Please try Again");
         }
     }
 
@@ -22,8 +21,7 @@ public class UserRegistration {
             user.setLastName(lastName);
             return true;
         } else {
-            System.out.println("Invalid Name please try again");
-            return false;
+            throw new UserRegistrationException("Invalid last Name Please try Again");
         }
     }
 
@@ -33,8 +31,7 @@ public class UserRegistration {
             user.setEmail(emailID);
             return true;
         } else {
-            System.out.println("Invalid Last Name Please try Again");
-            return false;
+            throw new UserRegistrationException("Invalid Email Please try Again");
         }
     }
 
@@ -44,8 +41,7 @@ public class UserRegistration {
             user.setPhoneNumber(phoneNumber);
             return true;
         } else {
-            System.out.println("Invalid Phone Number Please try Again");
-            return false;
+            throw new UserRegistrationException("Invalid Phone Number Please try Again");
         }
     }
 
@@ -55,8 +51,7 @@ public class UserRegistration {
             user.setPassword(password);
             return true;
         } else {
-            System.out.println("Invalid Password Please try again");
-            return false;
+            throw new UserRegistrationException("Invalid Password Please try Again");
         }
     }
 }
