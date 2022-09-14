@@ -1,11 +1,13 @@
 package com.bridgelabz;
 
 import java.util.regex.Pattern;
-
+interface IUserDatilsValidate{
+    boolean validate(String input);
+}
 public class UserRegistration {
     User user = new User();
 
-    public boolean firstName(String firstName) {
+    IUserDatilsValidate firstName = firstName -> {
         boolean result = (Pattern.matches("[A-Z]{1,}[a-zA-z]{2,10}", firstName));
         if (result) {
             user.setFirstName(firstName);
@@ -13,9 +15,9 @@ public class UserRegistration {
         } else {
             throw new UserRegistrationException("Invalid first Name Please try Again");
         }
-    }
+    };
 
-    public boolean lastName(String lastName) {
+    IUserDatilsValidate lastName= lastName -> {
         boolean result = (Pattern.matches("[A-Z]{1,}[a-zA-z]{2,10}", lastName));
         if (result) {
             user.setLastName(lastName);
@@ -23,9 +25,9 @@ public class UserRegistration {
         } else {
             throw new UserRegistrationException("Invalid last Name Please try Again");
         }
-    }
+    };
 
-    public boolean emailID(String emailID) {
+    IUserDatilsValidate emailID = emailID-> {
         boolean result = (Pattern.matches("^[a-zA-Z\\d]{1,1}[a-zA-Z\\d+_.-]+@[a-zA-Z]+.[a-zA-z.]{2,}", emailID));
         if (result) {
             user.setEmail(emailID);
@@ -33,9 +35,9 @@ public class UserRegistration {
         } else {
             throw new UserRegistrationException("Invalid Email Please try Again");
         }
-    }
+    };
 
-    public boolean phoneNumber(String phoneNumber) {
+    IUserDatilsValidate phoneNumber = phoneNumber -> {
         boolean result = (Pattern.matches("^[6789]{1}[\\d]{9}", phoneNumber));
         if (result) {
             user.setPhoneNumber(phoneNumber);
@@ -43,9 +45,9 @@ public class UserRegistration {
         } else {
             throw new UserRegistrationException("Invalid Phone Number Please try Again");
         }
-    }
+    };
 
-    public boolean password(String password) {
+    IUserDatilsValidate password = password-> {
         boolean result = Pattern.matches("(?=.*?[A-Z])(?=.*?[!@#$^&*.])(?=.*?[0-9])([a-zA-Z\\d@*#$&,.]){8,}", password);
         if (result) {
             user.setPassword(password);
@@ -53,5 +55,5 @@ public class UserRegistration {
         } else {
             throw new UserRegistrationException("Invalid Password Please try Again");
         }
-    }
+    };
 }

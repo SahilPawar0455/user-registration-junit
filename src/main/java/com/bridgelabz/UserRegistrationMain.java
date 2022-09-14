@@ -9,18 +9,18 @@ public class UserRegistrationMain {
         UserRegistration userRegistration = new UserRegistration();
         System.out.println("Enter the First Name");
         String firstName = scanner.next();
-        userRegistration.firstName(firstName);
+        userRegistration.firstName.validate(firstName);
         System.out.println("Enter the First Name");
         String lastName = scanner.next();
-        userRegistration.lastName(lastName);
+        userRegistration.lastName.validate(lastName);
         System.out.println("Enter the Email ID");
         String emailID = scanner.next();
-        userRegistration.emailID(emailID);
+        userRegistration.emailID.validate(emailID);
         System.out.println("Enter the Phone Number with Country Code ");
         String phoneNumber = scanner.next();
-        userRegistration.phoneNumber(phoneNumber);
+        userRegistration.phoneNumber.validate(phoneNumber);
         System.out.println("Enter the Password");
         String password = scanner.next();
-        userRegistration.password(password);
+        userRegistration.password.validate(password);
     }
 }

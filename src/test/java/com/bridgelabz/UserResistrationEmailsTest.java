@@ -34,6 +34,6 @@ public class UserResistrationEmailsTest {
     }
     @Test
     public void testEmails(){
-        Assert.assertEquals(result,userRegistration.emailID(emails));
+        Assert.assertEquals(result,userRegistration.emailID.validate(emails));
     }
 }
